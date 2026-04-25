@@ -1,0 +1,71 @@
+[2025-09-17 10:00:01] INFO: Application started successfully.
+[2025-09-17 10:00:02] INFO: Loading configuration from /etc/app/config.yml.
+[2025-09-17 10:00:03] WARNING: Deprecated config key 'use_old_api' found.
+[2025-09-17 10:00:04] INFO: Connecting to database 'main_db' on localhost:5432.
+[2025-09-17 10:00:05] INFO: Database connection established.
+[2025-09-17 10:00:06] INFO: Starting background task scheduler.
+[2025-09-17 10:00:07] DEBUG: Cache hit ratio: 0.87 (not relevant)
+[2025-09-17 10:00:08] INFO: User 'admin' logged in from 192.168.1.100.
+[2025-09-17 10:00:09] INFO: Processing request GET /api/v1/users.
+[2025-09-17 10:00:10] WARNING: Slow query detected: SELECT * FROM logs WHERE date > '2025-09-01' (took 2.3s).
+[2025-09-17 10:00:11] INFO: Request completed with status 200.
+[2025-09-17 10:00:12] INFO: User 'user123' logged in from 10.0.0.45.
+[2025-09-17 10:00:13] INFO: Fetching data from external API: https://api.example.com/data.
+[2025-09-17 10:00:14] WARNING: API response time high: 1.8s (threshold 1.0s).
+[2025-09-17 10:00:15] INFO: Data successfully fetched and cached.
+[2025-09-17 10:01:00] INFO: Scheduled job 'hourly_cleanup' started.
+[2025-09-17 10:01:01] INFO: Deleting old temporary files from /tmp/app/.
+[2025-09-17 10:01:02] WARNING: Could not delete file /tmp/app/session_abc123.lock: Permission denied.
+[2025-09-17 10:01:03] ERROR: Failed to delete old session files after 3 attempts.
+[2025-09-17 10:01:04] INFO: Cleaned up 127 files, freed 45.2 MB.
+[2025-09-17 10:01:05] INFO: Scheduled job 'hourly_cleanup' finished.
+[2025-09-17 10:02:00] INFO: User 'admin' performed action: create_backup.
+[2025-09-17 10:02:01] INFO: Backup started, target: /backups/app_20250917_100200.sql.gz.
+[2025-09-17 10:02:05] INFO: Backup completed successfully, size: 234 MB.
+[2025-09-17 10:02:30] ERROR: Database 'main_db' connection lost: timeout after 30s.
+[2025-09-17 10:02:31] WARNING: Attempting to reconnect to database (attempt 1/5).
+[2025-09-17 10:02:32] WARNING: Reconnect attempt 1 failed: connection refused.
+[2025-09-17 10:02:33] WARNING: Reconnect attempt 2 failed: connection refused.
+[2025-09-17 10:02:34] INFO: Successfully reconnected to database on attempt 3.
+[2025-09-17 10:02:35] INFO: Database connection restored.
+[2025-09-17 10:03:00] ERROR: Failed to connect to database 'main_db'.
+[2025-09-17 10:03:01] WARNING: Retry logic exhausted, marking database as unhealthy.
+[2025-09-17 10:03:02] CRITICAL: Application cannot continue without database. Shutting down.
+[2025-09-17 10:03:03] INFO: Initiating graceful shutdown.
+[2025-09-17 10:03:04] INFO: Closing open connections...
+[2025-09-17 10:03:05] INFO: Flushing logs to disk...
+[2025-09-17 10:03:06] INFO: Application shutdown complete.
+[2025-09-17 10:05:00] INFO: Application restarted by watchdog.
+[2025-09-17 10:05:01] INFO: Loading configuration...
+[2025-09-17 10:05:02] INFO: Configuration loaded successfully.
+[2025-09-17 10:05:03] WARNING: Debug mode is enabled in production.
+[2025-09-17 10:05:04] INFO: Connecting to database 'main_db'...
+[2025-09-17 10:05:05] INFO: Database connection established.
+[2025-09-17 10:05:06] INFO: Application started successfully.
+[2025-09-17 10:06:00] INFO: User 'user456' logged in from 172.16.0.22.
+[2025-09-17 10:06:15] INFO: Processing payment for order #ORD-12345.
+[2025-09-17 10:06:16] WARNING: Payment gateway timeout after 5s, retrying...
+[2025-09-17 10:06:18] ERROR: Payment processing failed for order #ORD-12345: insufficient funds.
+[2025-09-17 10:06:19] INFO: Payment failure notification sent to user 'user456'.
+[2025-09-17 10:07:00] INFO: Scheduled job 'daily_report' started.
+[2025-09-17 10:07:01] INFO: Generating report for 2025-09-16...
+[2025-09-17 10:07:05] INFO: Report generated: /reports/daily_20250916.pdf (1.2 MB).
+[2025-09-17 10:07:06] INFO: Sending report to admin@example.com.
+[2025-09-17 10:07:07] INFO: Email sent successfully.
+[2025-09-17 10:07:08] INFO: Scheduled job 'daily_report' finished.
+[2025-09-17 10:08:00] WARNING: High memory usage detected: 85% of 8GB.
+[2025-09-17 10:08:01] INFO: Running garbage collection...
+[2025-09-17 10:08:02] INFO: Memory usage reduced to 62%.
+[2025-09-17 10:09:00] ERROR: Unable to write log to /var/log/app.log: disk full.
+[2025-09-17 10:09:01] CRITICAL: Logging system failure. Switching to fallback logger.
+[2025-09-17 10:10:00] INFO: User 'admin' logged out.
+[2025-09-17 10:10:01] INFO: Session terminated.
+[2025-09-17 10:15:00] ERROR: External API https://api.example.com/data returned status 500.
+[2025-09-17 10:15:01] WARNING: Circuit breaker opened for external API.
+[2025-09-17 10:15:02] INFO: Using cached fallback data.
+[2025-09-17 11:00:00] INFO: Hourly health check started.
+[2025-09-17 11:00:01] INFO: Database OK (response time: 12ms).
+[2025-09-17 11:00:02] INFO: Cache OK (hit ratio 0.89).
+[2025-09-17 11:00:03] WARNING: Disk usage at 92%, cleaning old logs.
+[2025-09-17 11:00:04] INFO: Deleted 3 old log files (total 156 MB).
+[2025-09-17 11:00:05] INFO: Health check completed: all systems operational.
